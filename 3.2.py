@@ -25,11 +25,16 @@ def main(text, lang, language):  # приянли все 3 параметра
         download(name_files)
 
 
-def download(name_files):
-    URL = "https://cloud-api.yandex.net/v1/disk/resources/upload?path=disk:/" + name_files  #
-    path = "D:%5Cprogs%5Ctelegram%5C" + name_files
+def download(name_files):  # загрузка файлов на диск
+    # URL = "https://cloud-api.yandex.net/v1/disk/resources/upload?path=disk:/" + name_files  #
+    # path = "D:%5Cprogs%5Ctelegram%5C" + name_files  # путь куда на ЯД загрузить(корень)
+    # token = "AgAEA7qizIRBAADLW4R9aNCSREMag6JLwmvzj6A"
+    # path_computer = "D:\\progs\\telegram\\" + name_files  # путь где лежит файл на компьютере
+
+    URL = "https://cloud-api.yandex.net/v1/disk/resources/upload"  #
+    path = "disk%5C" + name_files  # путь куда на ЯД загрузить(корень)
     token = "AgAEA7qizIRBAADLW4R9aNCSREMag6JLwmvzj6A"
-    path_computer = "D:\\progs\\telegram\\" + name_files
+    path_computer = "D:\\progs\\telegram\\" + name_files  # путь где лежит файл на компьютере
 
     # Получаем ссылку для загрузки файла
     params = {"path": path}
